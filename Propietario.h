@@ -7,22 +7,24 @@
 
 #include <string>
 
+using namespace std;
+
 class Propietario {
 private:
-    std::string nombre;
-    std::string docIdentidad;
+    string nombre;
+    string docIdentidad;
     int edad;
 public:
     Propietario() = default; //Agrega constructor por defecto sin cuerpo
-    Propietario(std::string nombre);
-    Propietario(std::string nombre, std::string docIdentidad);
-    std::string mostrarInfo();
-    std::string getNombre();
-    void setNombre(std::string nombre);
-    void setdocIdentidad(std::string i);
+    Propietario(string nombre);
+    Propietario(string nombre, string docIdentidad);
+    string mostrarInfo();
+    string getNombre();
+    void setNombre(string nombre);
+    void setdocIdentidad(string i);
     void setEdad(int i);
     int getEdad();
-    std::string getdocIdentidad();
+    string getdocIdentidad();
 
 
 

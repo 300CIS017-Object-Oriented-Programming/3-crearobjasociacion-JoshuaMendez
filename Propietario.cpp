@@ -7,17 +7,17 @@
 //TODO Agrege el constructor por defecto y agrege un constructor con dos parametros
 
 
-Propietario::Propietario(std::string nombre, std::string docIdentidad) {
+Propietario::Propietario(string nombre, string docIdentidad) {
  this->nombre = nombre;
  this->docIdentidad = docIdentidad;
 }
 
-std::string Propietario::mostrarInfo() {
+string Propietario::mostrarInfo() {
     printf("%s\n %s\n %d\n", nombre, docIdentidad, edad);
     return nombre;
 }
 
-std::string Propietario::getNombre()  {
+string Propietario::getNombre()  {
     return nombre;
 }
 
@@ -25,19 +25,19 @@ int Propietario::getEdad()  {
     return edad;
 }
 
-std::string Propietario::getdocIdentidad() {
+string Propietario::getdocIdentidad() {
     return docIdentidad;
 }
 
-void Propietario::setNombre(std::string nombre) {
+void Propietario::setNombre(string nombre) {
     this->nombre = nombre;
 }
 
-Propietario::Propietario(std::string nombre) {
+Propietario::Propietario(string nombre) {
     this->nombre = nombre;
 }
 
-void Propietario::setdocIdentidad(std::string i) {
+void Propietario::setdocIdentidad(string i) {
     docIdentidad = i;
 }
 void Propietario::setEdad(int i) {

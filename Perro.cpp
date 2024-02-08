@@ -30,6 +30,10 @@ Propietario *Perro::getPropietario() {
     return this->pPropietario;
 }
 
+Veterinario *Perro::getVeterinario() {
+    return this->pVeterinario;
+}
+
 int Perro::getEdad() {
     return edad;
 }
@@ -74,4 +78,8 @@ Perro::~Perro() {
     delete pPropietario;
 }
 
-Perro::Perro(std::string nombre, int edad, std::string raza, std::string color, std::string tamanio) : nombre(nombre), edad(edad), raza(raza), color(color), tamanio(tamanio) {}
+Perro::Perro(std::string _nombre, int _edad, std::string _raza, std::string _color, std::string _tamanio) : nombre(_nombre), edad(_edad), raza(_raza), color(_color), tamanio(_tamanio) {}
+
+void Perro::asociarVeterinario(std::string nombreVeterinario, int aniosExperiencia) {
+    pVeterinario = new Veterinario(nombreVeterinario, aniosExperiencia);
+}

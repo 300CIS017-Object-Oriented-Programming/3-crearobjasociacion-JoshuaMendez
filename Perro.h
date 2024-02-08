@@ -8,25 +8,28 @@
 #include <cstdio>
 #include <iostream>
 #include "Propietario.h"
+#include "Veterinario.h"
 
 class Perro {
 private:
     int edad;
-    std::string nombre;
-    std::string raza;
-    std::string tamanio;
-    std::string color;
+    string nombre;
+    string raza;
+    string tamanio;
+    string color;
     Propietario* pPropietario;
+    Veterinario* pVeterinario;
 
 public:
     Perro();
-    Perro(std::string nombre, int edad, std::string raza, std::string color, std::string tamanio);
+    Perro(string _nombre, int _edad, string _raza, string _color, string _tamanio);
 ~Perro(); //Destructor
     void ladrar();
     Propietario * getPropietario();
+    Veterinario * getVeterinario();
 
         // El método agregarPropietario en la clase Perro está asignando un nuevo objeto de tipo Propietario a la variable miembro pPropietario. Este objeto Propietario se crea dinámicamente utilizando el operador new y se inicializa con los parámetros nombre y docIdentidad pasados al método.
-    void agregarPropietario(std::string nombre, std::string docIdentidad);
+    void agregarPropietario(string nombre, string docIdentidad);
 
     // Sirve para relacionar dos clases cuando ya se tiene un objeto
     void setPropietario(Propietario * pPropietario);
@@ -34,13 +37,14 @@ public:
 
     int getEdad();
     void setEdad(int edad);
-    std::string getRaza();
-    void setRaza(std::string raza);
-    std::string getNombre();
-    void setNombre(std::string nombre);
-    std::string getTamanio();
-    void setTamanio(std::string tamanio);
-    std::string getColor();
-    void setColor(std::string color);
+    string getRaza();
+    void setRaza(string raza);
+    string getNombre();
+    void setNombre(string nombre);
+    string getTamanio();
+    void setTamanio(string tamanio);
+    string getColor();
+    void setColor(string color);
+    void Perro::asociarVeterinario(string nombreVeterinario, int aniosExperiencia);
 };
 #endif

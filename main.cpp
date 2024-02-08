@@ -16,7 +16,7 @@ int main() {
     firulais.agregarPropietario("Carlos Zapata", "102842313");
 
     // Consultar el nombre del pPropietario del perro Firulais
-    std::cout<< "El nombre del pPropietario del perro "<<firulais.getNombre() << " es " << firulais.getPropietario()->getNombre()<<std::endl;
+    cout<< "El nombre del pPropietario del perro "<<firulais.getNombre() << " es " << firulais.getPropietario()->getNombre()<<endl;
 
     Perro gonzo("Gonzo", 100, "Chihuahua", "Rojo", "Grande");
     gonzo.ladrar();
@@ -29,6 +29,8 @@ int main() {
 
     gonzo.agregarPropietario("Joshua", "Cedula");
 
-    std::cout << "docIdentidad pPropietario "<< gonzo.getPropietario()->getdocIdentidad() << std::endl;
-    std::cout << "Edad pPropietario" << gonzo.getPropietario()->getEdad() << std::endl;
+    cout << "docIdentidad pPropietario " << gonzo.getPropietario()->getdocIdentidad() << endl;
+    cout << "Edad pPropietario " << gonzo.getPropietario()->getEdad() << endl;
+
+    cout << "Nombre Veterinario " << gonzo.getVeterinario()->getNombre() << " Anios de Experiencia " << gonzo.getVeterinario()->getaniosExperiencia() << endl;
 }
