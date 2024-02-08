@@ -74,6 +74,4 @@ Perro::~Perro() {
     delete pPropietario;
 }
 
-
-
-
+Perro::Perro(std::string nombre, int edad, std::string raza, std::string color, std::string tamanio) : nombre(nombre), edad(edad), raza(raza), color(color), tamanio(tamanio) {}

@@ -18,5 +18,17 @@ int main() {
     // Consultar el nombre del pPropietario del perro Firulais
     std::cout<< "El nombre del pPropietario del perro "<<firulais.getNombre() << " es " << firulais.getPropietario()->getNombre()<<std::endl;
 
-    return 0;
+    Perro gonzo("Gonzo", 100, "Chihuahua", "Rojo", "Grande");
+    gonzo.ladrar();
+
+    Propietario gonzalo("Gonzalo");
+
+    gonzalo.setdocIdentidad("Cedula");
+    gonzalo.setEdad(100);
+    gonzalo.mostrarInfo();
+
+    gonzo.agregarPropietario("Joshua", "Cedula");
+
+    std::cout << "docIdentidad pPropietario "<< gonzo.getPropietario()->getdocIdentidad() << std::endl;
+    std::cout << "Edad pPropietario" << gonzo.getPropietario()->getEdad() << std::endl;
 }

@@ -5,6 +5,7 @@
 #define PERRO_H
 
 #include <string>
+#include <cstdio>
 #include <iostream>
 #include "Propietario.h"
 
@@ -19,11 +20,12 @@ private:
 
 public:
     Perro();
-    ~Perro(); //Destructor
+    Perro(std::string nombre, int edad, std::string raza, std::string color, std::string tamanio);
+~Perro(); //Destructor
     void ladrar();
     Propietario * getPropietario();
 
-    // Sirve para.......
+        // El método agregarPropietario en la clase Perro está asignando un nuevo objeto de tipo Propietario a la variable miembro pPropietario. Este objeto Propietario se crea dinámicamente utilizando el operador new y se inicializa con los parámetros nombre y docIdentidad pasados al método.
     void agregarPropietario(std::string nombre, std::string docIdentidad);
 
     // Sirve para relacionar dos clases cuando ya se tiene un objeto
