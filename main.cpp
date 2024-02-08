@@ -1,8 +1,12 @@
 #include <iostream>
 #include "Perro.h"
 #include "Propietario.h"
+#include "Raza.h"
 
 int main() {
+
+    Raza mastinNapolitano("Mastin Napolitano", "Italia");
+    Raza maltes("Maltes", "Italia");
 
     // Instanciar
     Perro firulais;
@@ -11,6 +15,7 @@ int main() {
     firulais.setEdad(5);
     firulais.setTamanio("Grande");
     firulais.setRaza("Mastin napolitano");
+    firulais.setpRaza(&mastinNapolitano);
 
     //Agregar un nuevo pPropietario a Firulais
     firulais.agregarPropietario("Carlos Zapata", "102842313");

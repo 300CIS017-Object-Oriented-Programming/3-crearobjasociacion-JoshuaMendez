@@ -9,6 +9,7 @@
 #include <iostream>
 #include "Propietario.h"
 #include "Veterinario.h"
+#include "Raza.h"
 
 class Perro {
 private:
@@ -19,6 +20,7 @@ private:
     string color;
     Propietario* pPropietario;
     Veterinario* pVeterinario;
+    Raza* pRaza;
 
 public:
     Perro();
@@ -27,12 +29,15 @@ public:
     void ladrar();
     Propietario * getPropietario();
     Veterinario * getVeterinario();
+    Raza * getpRaza();
 
-        // El método agregarPropietario en la clase Perro está asignando un nuevo objeto de tipo Propietario a la variable miembro pPropietario. Este objeto Propietario se crea dinámicamente utilizando el operador new y se inicializa con los parámetros nombre y docIdentidad pasados al método.
+    // El método agregarPropietario en la clase Perro está asignando un nuevo objeto de tipo Propietario a la variable miembro pPropietario.
     void agregarPropietario(string nombre, string docIdentidad);
 
     // Sirve para relacionar dos clases cuando ya se tiene un objeto
     void setPropietario(Propietario * pPropietario);
+
+    void setpRaza(Raza * pRaza);
 
 
     int getEdad();
@@ -45,6 +50,6 @@ public:
     void setTamanio(string tamanio);
     string getColor();
     void setColor(string color);
-    void Perro::asociarVeterinario(string nombreVeterinario, int aniosExperiencia);
+    void asociarVeterinario(string nombreVeterinario, int aniosExperiencia);
 };
 #endif
